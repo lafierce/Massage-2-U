@@ -1,0 +1,188 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>Massage 2 U, LLC</title>
+<script type="text/javascript" language="javascript">
+window.onresize = resized;
+function resized() {
+	//alert("has resized");
+	placeMenu();
+}
+// placeMenu() determines if browser window width is less than watermark image width
+// if less than width a default placement of menu element is in place
+// if equal to or greater than watermark image width then place menu accordingly
+function placeMenu() {
+	// set up the logo image
+	logoImage=new Image();
+	var imgWidth=815;
+	var imgHeight=710;
+
+	// setup the appropriate logo based on the location
+	var strLocation = new String(window.location);
+	if (strLocation.match(/template.html/i) || strLocation.match(/index.php/i)) {
+		// large logo 262 x 365
+		var logoWidth=365;
+		document.m2u_logo.src="images/m2u-logo.gif";
+		document.m2u_logo.height="262";
+		document.m2u_logo.width="365";
+		newLogoWidth=(document.body.clientWidth - logoWidth) / 2;
+		document.getElementById("logo_home").style.left=newLogoWidth;
+	} else {
+		// small logo 265 x 191
+		var logoWidth=265;
+		document.m2u_logo.src="images/m2u-logo-small.gif";
+		document.m2u_logo.height="191";
+		document.m2u_logo.width="265";
+		newLogoWidth=(document.body.clientWidth - logoWidth) / 2;
+		document.getElementById("logo_home").style.left=newLogoWidth;
+	}
+
+	if (document.body.clientWidth<=imgWidth) {
+		newWidth=35;
+		leftAlignWidth=imgWidth-325;
+	} // end if doc.bod.cWdth<708
+	if (document.body.clientWidth>imgWidth) {
+		newWidth=(document.body.clientWidth - imgWidth)/2;
+		newWidth+=35;
+		leftAlignWidth=((document.body.clientWidth - imgWidth) / 2) + (imgWidth-310);
+		newFooterAlign=(document.body.clientWidth - imgWidth ) / 2;
+	}
+
+	var contentHeight = document.getElementById("content_div").clientHeight;
+	var logoHeight = document.getElementById("logo_home").clientHeight;
+	var newContentPos=document.m2u_logo.height;
+	totalHeight = contentHeight + logoHeight;
+
+	if (totalHeight>imgHeight) {
+		document.getElementById("footer_image").style.top=totalHeight+35;
+		document.getElementById("footer_copy").style.top=totalHeight+20;
+	} else {
+		document.getElementById("footer_image").style.top=imgHeight;
+		document.getElementById("footer_copy").style.top=imgHeight-15;
+	}
+		
+	document.getElementById("common_btn_menu").style.left=newWidth;
+	document.getElementById("content_div").style.left=newWidth+200;
+	document.getElementById("content_div").style.top=newContentPos+45;
+	document.getElementById("footer_copy").style.left=leftAlignWidth;
+	document.getElementById("footer_image").style.left=newFooterAlign;
+}
+function testBtn() {
+	//alert("content height: "+document.getElementById("content_div").clientHeight+"\nbody height: "+document.body.clientHeight);
+	//alert("total height: "+totalHeight+"\nbody height: "+document.body.clientHeight);
+	//alert(window.location);
+	var str =  String(window.location);
+	if (str.match(/template.html/i)) { loc = window.location; } else { loc = "whoops"; }
+	alert(loc);
+}
+</script>
+<style type="text/css">
+body {
+	//background-image: url("images/m2u-bk-wmark.jpg");
+	background-repeat: no-repeat;
+	//background-attachment: fixed;
+	background-position: center;
+	background-position-y: top;
+	background-color: #cccccc;
+	font-family: Geneva,Verdana,sans-serif;
+	font-size: 12pt;
+	//width: 100%;
+}
+.bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	//z-index: 5000;
+}
+#logo_home {
+	position: absolute;
+	left: 0px;
+	top: 35px;
+	height: 262px;
+}
+#common_btn_menu {
+	background-image: url("images/btn-decoration-bk.gif");
+	position: absolute;
+	left: 0px;
+	top: 300px;
+	//border-collapse: collapse;
+	//border: 1px solid #c4f5d1;
+	width: 135px;
+	height: 418px;
+}
+#content_div {
+	position: absolute;
+	left: 131px;
+	width: 500px;
+	padding: 5px;
+	//border: solid 1px #cccccc;
+
+}
+#footer_copy {
+	position: absolute;
+	text-align: center;
+	width: 325px;
+	font-size: 8pt;
+	//font-weight: bold;
+	font-family: Verdana;
+	color: #0000aa;
+	//border: 1px solid #00dd00;
+}
+#footer_image {
+	background-image: url("images/m2u-footer-grad.gif");
+	position: absolute;
+	width: 815px;
+	height: 10px;
+	left: 0px;
+	top: 708px;
+}
+#rust_header {
+	font-size: 18pt;
+	color: #97111d;
+}
+</style>
+</head>
+<body onload="placeMenu();">
+
+<img id="background-img" class="bg" src="images/m2u-bk-wmark.jpg" alt="" />
+
+<div id="logo_home" name="logo_home"><img src="images/m2u-logo.gif" name="m2u_logo" alt="Massage 2 U, LLC Logo | Houston TX 77006" height="262" width="365" /></div>
+
+<div id="common_btn_menu" name="common_btn_menu">
+<img src="images/blank.gif" alt="" height="50" width="131" />
+<a href="index.php" title="home"><img src="images/btn-home.gif" alt="home" height="31" width="131" /></a><br />
+<a href="servicearea.php" title="service area"><img src="images/btn-svcarea.gif" alt="service area" height="31" width="131" /></a><br />
+<a href="rates.php" title="rates/hours"><img src="images/btn-rates.gif" alt="rates/hours" height="31" width="131" /></a><br />
+<a href="therapists.php" title="therapists"><img src="images/btn-therapists.gif" alt="therapists" height="31" width="131" /></a><br />
+<a href="appointments.php" title="appointments"><img src="images/btn-appointments.gif" alt="appointments" height="31" width="131" /></a><br />
+<a href="aboutus.php" title="about us"><img src="images/btn-aboutus.gif" alt="about us" height="31" width="131" /></a><br />
+<a href="members.php" title="members"><img src="images/btn-members.gif" alt="members" height="31" width="131" /></a><br />
+<a href="createacct.php" title="create account"><img src="images/btn-createacct.gif" alt="create account" height="31" width="131" /></a><br />
+<a href="provider.php" title="become a provider"><img src="images/btn-provider.gif" alt="become a provider" height="31" width="131" /></a><br />
+<a href="friends.php" title="our friends"><img src="images/btn-friends.gif" alt="our friends" height="31" width="131" /></a><br />
+<img src="images/blank.gif" alt="" height="50" width="131" />
+</div>
+
+<div id="content_div" name="content_div">
+<p id="rust_header">Our Mission Statement</p>
+<p>We strive to utilize our combined experience to provide the best, 
+most relaxing massage for every one of our clients. 
+As a result, we become your massage provider for life.  
+Thank you for choosing Massage2U.
+<br /><br />
+Our phone number 888-308-8965</p>
+content goes here
+<br /><br /><br /><br /><br /><br />
+</div>
+<a href="http://css-tricks.com/examples/ImageToBackgroundImage/style.css">css</a>
+<div id="footer_copy" name="footer_copy">
+Massage 2 U &copy; 2009 &mdash; 2010 &middot; 888.308.8965<br />
+</div>
+
+<div id="footer_image" name="footer_image"></div>
+
+<input type="button" value="test" onclick="testBtn();" />
+
+</body>
+</html>

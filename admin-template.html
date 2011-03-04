@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>Massage 2 U, LLC</title>
+<link rel="stylesheet" lang="text/css" href="m2u-style.css" />
+<script type="text/javascript" language="javascript">
+window.onresize = resized;
+function resized() {
+	//alert("has resized");
+	placeMenu();
+}
+// placeMenu() determines if browser window width is less than watermark image width
+// if less than width a default placement of menu element is in place
+// if equal to or greater than watermark image width then place menu accordingly
+function placeMenu() {
+	// set up the logo image
+	logoImage=new Image();
+	var imgWidth=815;
+	var imgHeight=710;
+
+	var adminLogoWidth=140;
+	document.m2u_admin_logo.src="images/m2u-admin-logo.gif";
+	document.m2u_admin_logo.height=100;
+	document.m2u_admin_logo.width=140;
+	//newAdminLogoWidth=(document.body.clientWidth - adminLogoWidth) / 2;
+	newAdminLogoWidth=(document.body.clientWidth - imgWidth) / 2;
+	document.getElementById("admin_logo_home").style.left=newAdminLogoWidth;
+	
+	if (document.body.clientWidth<=imgWidth) {
+		newWidth=35;
+		leftAlignWidth=45;
+		newFooterAlign=45;
+	} // end if doc.bod.cWdth<708
+	if (document.body.clientWidth>imgWidth) {
+		newWidth=(document.body.clientWidth - imgWidth)/2;
+		newWidth+=45;
+		leftAlignWidth=((document.body.clientWidth - imgWidth) / 2) + (imgWidth-300);
+		newFooterAlign=(document.body.clientWidth - imgWidth ) / 2;
+	}
+
+	var contentHeight = document.getElementById("content_div").clientHeight;
+	var logoHeight = document.getElementById("admin_logo_home").clientHeight;
+	var menuHeight = document.getElementById("adminmenu").clientHeight;
+
+	newMenuWidth = (document.body.clientWidth - imgWidth) / 2;
+	newMenuHeight = logoHeight + 20;
+	newContentPos = logoHeight + document.getElementById("adminmenu").clientHeight;
+	totalHeight = contentHeight + logoHeight + newMenuHeight;
+
+	if (totalHeight>imgHeight) {
+		document.getElementById("footer_image").style.top=totalHeight+35;
+		document.getElementById("footer_copy").style.top=totalHeight+20;
+	} else {
+		document.getElementById("footer_image").style.top=imgHeight;
+		document.getElementById("footer_copy").style.top=imgHeight-15;
+	}
+		
+	//document.getElementById("common_btn_menu").style.left=newWidth;
+	document.getElementById("admin_logo_home").style.top=10;
+	document.getElementById("adminmenu").style.top=newMenuHeight;
+	document.getElementById("adminmenu").style.left=newMenuWidth;
+	document.getElementById("content_div").style.left=newWidth;
+	document.getElementById("content_div").style.top=newContentPos;
+	document.getElementById("footer_copy").style.left=leftAlignWidth;
+	document.getElementById("footer_image").style.left=newFooterAlign;
+}
+
+function testBtn() {
+	alert(document.getElementById("content_div").style.top);
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="mouseovertabs.css" />
+<script src="mouseovertabs.js" type="text/javascript">
+
+/***********************************************
+* Mouseover Tabs Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+<body onload="placeMenu();">
+
+<div id="admin_logo_home" name="admin_logo_home"><img src="images/m2u-admin-logo.gif" name="m2u_admin_logo" alt="Massage 2 U, LLC Logo | Houston TX 77006" height="100" width="139" /></div>
+
+<div id="adminmenu" name="adminmenu">
+<div id="mytabsmenu" class="tabsmenuclass">
+<ul>
+<li><a href="therapist-admin.php" rel="gotsubmenu[selected]">Therapists</a></li>
+<li><a href="security.php" rel="gotsubmenu">Security Admin</a></li>
+<li><a href="http://www.codingforums.com">No Sub Menu</a></li>
+</ul>
+</div>
+
+<div id="mysubmenuarea" class="tabsmenucontentclass">
+
+<!--1st link within submenu container should point to the external submenu contents file-->
+<a href="submenucontents.htm" style="visibility:hidden">Sub Menu contents</a>
+
+</div>
+
+<script type="text/javascript">
+//mouseovertabsmenu.init("tabs_container_id", "submenu_container_id", "bool_hidecontentsmouseout")
+mouseovertabsmenu.init("mytabsmenu", "mysubmenuarea", true)
+
+</script>
+
+<br style="clear:left" />
+</div>
+<div id="content_div" name="content_div">
+
+<input type="button" value="test" onclick="testBtn();" />
+ src="m2u-admin-script.js"
+</div>
+
+<div id="footer_copy" name="footer_copy">
+Massage 2 U &copy; 2009 &mdash; 2010 &middot; 888.308.8965<br />
+</div>
+
+<div id="footer_image" name="footer_image"></div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Disallow: /images/
+Disallow: /stats/
+Disallow: /testsite/
+Disallow: /therapist_images/
+Disallow: /webformmailer.php/

@@ -1,0 +1,78 @@
+# Simple Sitemap 1.0
+# sitemap.txt used to create an XML Google Sitemap file
+# COPYRIGHT (C) 2005 BY SMART-IT-CONSULTING.COM
+# * Do not remove this header
+# * This program is provided AS IS 
+# * Use this program at your own risk
+# * Don't publish this code, link to http://www.smart-it-consulting.com/ instead
+# * Download here: http://www.smart-it-consulting.com/article.htm?node=154
+# ************************************************************************
+# USAGE:
+# Add a line per page you want to submit via Google Sitemaps between
+# START DATA and END DATA.
+#
+# Column 1: Relative URL, e.g. '/what-is-new.htm?page=17&itemsPerPage=10'
+#           NO session IDS! NO DOS-BACKSLASHES! 
+#           Only content pages, no images, movies, CSS files or such
+#           Mandatory
+# Column 2: Date/Time of last modification, e.g. '2005-07-25 12:13:41'
+#           You can omit the time, but keep the format CCYY-MM-DD 
+#           Optional            
+# Column 3: Change Frequency, valid values are:
+#           'always'  - page content changes significantly with every page view 
+#           'hourly'
+#           'daily'
+#           'weekly'
+#           'monthly'
+#           'yearly'
+#           'never'   - archived pages which aren't changed any more, PDF documents and such
+#           Optional
+# Column 4: Crawling priority 0.0 - 1.0
+#           Optional
+# Column 5: Level 0 - n, example:
+#           Root index page     = 0
+#           Category index page = 1
+#           Content page        = 2
+#           Mandatory for HTML sitemap 
+# Column 6: Page title, don't use '#' or '\' or '|' or crlf (new line) 
+#           in this text field
+#           Mandatory for HTML sitemap and RSS feed
+#
+# Column 7: Page description, don't use hard line breaks
+#           Optional for HTML sitemap (used as tooltip in links)
+#           Mandatory for RSS feed
+#
+# Column 8: RSS Categories
+#           A comma delimited list of max. 5 categories applicable for the page
+#           Optional but recommended for RSS feed
+#
+# Column 5 + 6 + 7 are used for the HTML site map.
+# Column 6 + 7 + 8 are used for the RSS site feed
+#
+# If you omit an attribute, keep the delimiter '|'!
+#
+# More information: 
+# http://www.smart-it-consulting.com/article.htm?node=133&page=39
+# http://www.smart-it-consulting.com/article.htm?node=154
+#
+# EXAMPLES (omit the comment marker '#' when you copy, paste and modify):
+#/|2005-07-25|monthly|0.5|0|Home page|Site description||
+#/catindex.htm?node=2|2005-07-24|weekly|0.6|1|Web Development|Page Description|keyword1,keyword 2,keyword phrase 3|
+#/article.htm?node=133| | |0.9|1|Google Sitemaps Tutorial|Page Description|keyword1,keyword 2,keyword phrase 3|
+#/internet/google/submit-validate-sitemap/| |monthly| |2|Free XML Validator|Page Description|keyword1,keyword 2,keyword phrase 3|
+#/article.htm?node=154|2005-07-25 13:00:00| | |2|Free Site Map Tool|Page Description|keyword1,keyword 2,keyword phrase 3|
+#/get-help.htm?node=154|2005-07-25|monthly|0.5|1|Support|Page Description|keyword1,keyword 2,keyword phrase 3|
+#
+# ****************************************************************************
+# START DATA
+
+/|2005-07-25|monthly|0.5|0|Home page|Site description|category1,cat2,cat3,cat4,cat5|
+
+
+
+
+
+# END DATA
+# ****************************************************************************
+# Leave the EOF at the last line
+# EOF 

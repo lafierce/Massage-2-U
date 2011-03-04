@@ -1,0 +1,201 @@
+Simple Sitemap 1.01
+===================
+Copyright (c) 2005 by smart-it-consulting.com
+* This program is provided AS IS 
+* Use this program at your own risk
+* Don't publish the code, link to http://www.smart-it-consulting.com/ instead
+* Information: http://www.smart-it-consulting.com/article.htm?node=154
+* Support: http://www.smart-it-consulting.com/get-help.htm?node=154
+
+Purpose:
+--------
+
+"Simple Sitemap" is a PHP script creating a Google XML sitemap and an HTML sitemap from a plain text file. Web developers have to maintain the URL list in the text file, the script outputs the sitemaps and a RSS feed on request. It's suitable for small Web sites with no more than 100 pages (it works fine with more pages, but that's not recommended). 
+
+Prerequisites:
+--------------
+
+1. PHP 4.3.1 or later must be installed on the Web server. The script will not work with earlier PHP versions. To check your PHP version, create a new text file named 'deleteme.php' containing only one line:
+<?php phpinfo(); ?>  
+Upload deleteme.php to your Web server in ASCII mode and execute it in your Web browser. Look for the PHP version, then delete the file on the server and on your hard disk as well. For security reasons you must not leave that file on your server.
+
+2. You should be familiar with the basics of Web site maintenance.
+
+License:
+--------
+
+1. You can use this tool for free, as long as you do not disable the creation of the HTML sitemap, and leave the link to smart-it-consulting.com on the generated HTML sitemap page intact and unchanged. (You must not make the link invisible (for example with an x-small font or background color = foreground color ...). You must not insert a 'REL' attribute in the 'A' tags. You must not change the URL in the 'HREF' attribute of the 'A' tag. You must not change the 'TITLE' attributes or the anchor text.) If you use the build-in RSS feed, you must not remove or change the last item 'powered by Simple Sitemaps'.
+
+OR
+
+2. You can pay a fair license fee and/or request paid installation services here:
+http://www.smart-it-consulting.com/get-help.htm?node=154
+As soon as your payment hits our bank account, you can disable the HTML sitemap creation and/or remove the link to smart-it-consulting.com.
+
+
+Installation:
+-------------
+
+1. File List:
+sitemap.doc      - This file (plain text)
+sitemap.php      - The script outputting the XML sitemap and writing the 
+                   HTML sitemap as well as the RSS feed to disk
+sitemap.cfg      - Configuration file
+sitemap.htm      - An empty HTML sitemap 
+sitemap.tmpl     - The template for the HTML sitemap
+sitemap.txt      - The pipe delimited text file containing the URL list
+sitemaprss20.php - An empty RSS feed
+sitemaprss20.gif - An image used to link to the RSS feed
+
+2. Configuration:
+- Unzip sitemap.zip into an empty directory on your client machine.
+
+- Open sitemap.cfg with an ANSII editor like vi or notepad.
+- Edit the variables below the header:
+  $rootUrl:           "http://www.yourdomain.com" without a trailing slash.
+  $sitemapTxtFile:    Leave the default "sitemap.txt"*).
+  $createHtmlSitemap: TRUE  if you want a HTML sitemap.
+                      FALSE if you don't want a HTML sitemap. 
+                      If FALSE, you can ignore the following variables.
+  $sitemapTmplFile:   Leave the default "sitemap.tmpl"*).
+  $sitemapHtmlFile:   Leave the default "sitemap.htm"*) if you haven't this 
+                      file in your server's root directory yet. Otherwise
+                      change the file name to "sitemap.html" or so.
+  $sitemapHtmlTitle:  Change to "YourCompany Site Map" or so, this is the
+                      page title for the HTML site map.
+  *) If you use other file names, you must rename the files on disk too.
+- Save and close sitemap.cfg.
+  (If you make use of the RSS feed generation, you need to edit additional
+  variables, more information below under "Configuring the RSS feed".) 
+
+- Open sitemap.txt with an ANSII editor like vi or notepad.
+- Read the instructions in the header.
+- Enter your page list as described. You can omit the 'level' column if 
+  you don't need the HTML site map, but fill in page titles for better
+  readability. For use in the RSS feed add descriptions and categories.
+- Save and close sitemap.txt.
+
+- Open sitemap.tmpl with an ANSII editor like vi or notepad.
+- Customize the STYLE tag and such to fit your sites look and feel.
+  Keep the placeholders %TITLE% %PAGELIST% %RSSIMAGELINK% and 
+  %SCRIPTLINK% intact. 
+- Save and close sitemap.tmpl.
+  (More information below under "Customize HTML Template")  
+
+3. File Upload:
+- Check your Web server's root directory for files named 'sitemap*.*'.
+  If you've used the file name 'sitemap*.*' before, rename all the
+  Simple Sitemap files to 'site-map*.*' or so, change the values in
+  sitemap.cfg, and edit the line 'require("sitemap.cfg");' in sitemap.php. 
+- Upload all files except the image to your Web server's root directory in 
+  ASCII mode. Upload sitemaprss20.gif in BINARY mode.
+  You cannot put the files in a subdirectory, because Google expects the XML 
+  sitemap in the root.
+- Do a CHMOD 666 on sitemap.htm and sitemaprss20.php to ensure those files 
+  can be overwritten (very important!). 
+  You'll find the CHMOD command under UNIX commands in your FTP client.
+  Select the file on the server, click on CHMOD and enter 666 or grant
+  WRITE permissions to ALL.
+
+4. First Execution:
+- Open http://www.yourdomain.com/sitemap.php with your Web browser.
+  If no error message appears, validate the XML sitemap here:
+  http://www.smart-it-consulting.com/internet/google/submit-validate-sitemap/
+- Open http://www.yourdomain.com/sitemap.htm with your browser.
+  If necessary, customize the template. Then put in a link from your home
+  page to tell search engine crawlers where your sitemap is located.
+  Visitors make use of site maps for navigation, thus it's a good idea to
+  link the site map from every page.
+- If the XML sitemap validates, create a Google account and submit it.
+  More information here:
+  http://www.smart-it-consulting.com/article.htm?node=133&page=36
+- Open http://www.yourdomain.com/sitemaprss20.php with your browser.
+  If no error message appears, validate your RSS feed here:
+  http://www.feedvalidator.org/
+  If the feed does not validate, remove all special characters from your
+  input text and try it again. Usually it validates fine. Put in a link
+  to your site feed on all pages. Submit your feed to search engines and
+  other places accepting deef submissions. Syndicate it yourself too, for
+  example on MyYahoo, MyMSN, your personalized Google home page, your
+  news reader ....
+
+
+Maintenance:
+------------
+- Every time when your Web designers add or update a page, they must change
+  the "sitemap.txt" file and upload the new version. 
+- It is recommended to resubmit the XML sitemap on changes, you can do that
+  in your Google account or with the sitemap XML validator linked above.
+- When Googlebot (Google's Web robot) requests "sitemap.php" from your server,
+  the HTML sitemap gets updated. If you want to update the HTML sitemap
+  before Googlebot's visit, just execute sitemap.php with your Web browser.
+  The same goes for the RSS feed. Just bookmark sitemap.php on your server,
+  when you click on the bookmark everything refreshes.
+
+
+
+Customizing the HTML Template:
+------------------------------
+As described above, you can change the included template file to your needs. However, this may not be the best solution. The alternative is:
+- Create a static HTML page from your usual page template.
+- Insert the placeholders %TITLE% %PAGELIST% %RSSIMAGELINK% and 
+  %SCRIPTLINK%.
+- Save the page as 'sitemap.tmpl'.
+Placeholders explained:
+%TITLE% is the page's title. It shall be used in the TITLE tag and in a H1 tag as well.
+%PAGELIST% is the hierarchical list of your pages. Place it directly below the H1 heading.
+%RSSIMAGELINK% is an image linked to your site's RSS feed. Put it once in the page's bottom line and once more prominent in your navigation area. If you disable the RSS feed generation, this placeholder gets replaced with white space.
+%SCRIPTLINK% is a paragraph (P tag) containing the link to Smart IT Consulting. You must display this link on your page if you didn't pay for the software. The best placement is above or below the bottom line.
+
+Configuring the RSS feed:
+-------------------------
+To make proper use of the build-in RSS feed, you must provide page descriptions in the data file, and you should provide RSS categories per page too. It is very important, that you use plain text without any special characters like copyright or trademark symbols, ampersands and so on. Also you cannot use line breaks, HTML tags and HTML entities like &copy; &trade; or &amp;
+
+Next you have to edit a few variables in sitemap.cfg:
+- $createRss20Feed:      Set to TRUE
+- $sitemapFeedTitle:     Insert the feed title you want to see in your news 
+                         reader. Example:
+                         "Lutheran St. John's Primary and Preschool"
+- $sitemapFeedDesc:      Write a short one-sentence description of your site's 
+                         feed. Do not use line breaks. Example:
+                         "Everything you want to know about the Lutheran St. 
+                         John's Primary and Preschool"
+- $sitemapFeedLanguage:  Defaults to  "en-us".
+                         Insert your site's language, use standardized 
+                         language codes only! All valid codes are here: 
+                         http://www.w3.org/WAI/ER/IG/ert/iso639.htm
+
+- $sitemapFeedCopyright: Change to your domain, buzz ...
+                         Do NOT use the copyright symbol © or &copy; nor 
+                         any other special characters!
+- $sitemapFeedFile:      Stick with "sitemaprss20.php". 
+                         DO NOT change the extension '.php'!
+- $sitemapFeedImageFile: Stick with "sitemaprss20.gif".
+
+Done. Validate your feed as described above, before you submit it anywhere.
+
+
+Troubleshooting:
+----------------
+If you refresh sitemap.php and your browser tells you that you've junk ("<br />") in the XML file, you've forgotten to "CHMOD 666" the files sitemap.htm and sitemaprss20.php on your server. To get the complete error message, view the source: "<br />
+<b>Warning</b>:  fopen(sitemap.htm) [<a href='http://www.php.net/function.fopen'>function.fopen</a>]: failed to create stream: Permission denied in <b>.../yourdomain/sitemap.php</b> on line <b>193</b><br />". You must grant write access to the script, otherwise it can't overwrite the files. "CHMOD 666" grants write access to Owner/Group/Other on UNIX hosts. You'll find it in your FTP client too. Use a similar command if your server runs another operating system.
+
+
+Support:
+--------
+Paid email support and installation services are available at 
+http://www.smart-it-consulting.com/get-help.htm?node=154
+
+Smart IT Consulting can provide you with a data file initialized with values spidered from your Web site. This service is not free of charge. 
+
+
+
+Versions:
+---------
+1.0 (BETA) - 2005-07-25
+
+1.01 (BETA) - 2005-07-29
+- Added tooltips to links, pulled from the 7th column in the flat file.
+- Added placeholder %SCRIPTLINK% to make customizing of the HTML site map easier.
+- Added suppress of error messages caused by missing write permissions.
+- Added generation of a site feed in RSS 2.0 format.

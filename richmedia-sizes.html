@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ClientName - demo v1</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<style type="text/css" media="screen">
+* {font-family: Tehoma,sans-serif;}
+body {
+	color:#666696;
+	background-color: #dfdfdf;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+div.topbar {height: 100px;}
+
+div.footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+a {color:#9999f9;}
+a:active, a:visited, a:hover {color:#ccccfc;}
+a img {border:0;}
+div.flash {margin-left:auto;margin-right:auto; display:none; border:1px solid #000000; background:#87cdf3;}
+.opacity70 {filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity:0.7; opacity:0.7;}
+p {margin-left:auto; margin-right:auto; width:360px; text-align:center;}
+</style>
+</head>
+<body>
+
+<p style="font-size:1.75em;">Banner Size Examples<br /><span style="font-size:small;">v1</span></p>
+<p>
+	<a href="#" onClick="$('div.flash').hide();$('#w160x600').show();">160x600</a> &nbsp;&nbsp;
+	<a href="#" onClick="$('div.flash').hide();$('#w300x250').show();">300x250</a> &nbsp;&nbsp;
+	<a href="#" onClick="$('div.flash').hide();$('#w728x90').show();">728x90</a> &nbsp;&nbsp;	
+</p>
+<br /><br />
+<div class="flash opacity70" id="w160x600" style="width:160px; height:600px;">
+	160 x 600
+</div>
+
+<div class="flash" id="w300x250" style="width:300px; height:250px;">
+	300 x 250
+</div>
+
+<div class="flash" id="w728x90" style="width:728px; height:90px;">
+	728x90
+</div>
+
+<div class="footer">
+<!--	<div style="float:left;"><img src="http://dev.wearepixel.com/images/pixel_footer.jpg"></div>
+	<div style="float:right;"><img src="http://dev.wearepixel.com/images/address_footer.jpg"></div> -->
+</div>   
+	  
+
+</body>
+</html>

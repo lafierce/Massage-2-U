@@ -1,0 +1,443 @@
+html,body {margin:0; padding:0; min-height:100%; height:100%; font-family: 'Helvetica Neue',Verdana,Arial,sans-serif;
+
+}
+a {text-decoration: none; color: #000000;}
+a:hover {text-decoration: underline;}
+img {border:0;}
+table {border:0; margin:auto; width:500px; padding:2px; border-spacing:1px; }
+td {text-align:center;}
+#container {position:relative; min-height: 100%; width:900px; margin-left: auto; margin-right: auto;}
+#header {height:85px;}
+#body {width:848px; padding: 5px 25px 230px 25px;font-size: 0.9em; margin-top:15px;}
+#footer {position:absolute; width:900px; bottom:0;}
+/* IE 6+ compatibility: #body {padding: 5 25 150 25 */
+
+#body {
+	background-image:url('images/handsbackground.jpg');
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+
+.footer {
+	color: #ffffff;
+	background-color: #2a5d7c;
+	font-size: 0.85em;
+}
+.footer a:hover {
+	color:#ffffff;
+	text-decoration: underline;
+}
+
+#bottom_footer {
+	margin-top: -19px;
+}
+
+.fauxBlueButton {
+	color: #ffffff;
+	background-color: #46738f;
+	padding: 6px;
+	font-size:0.85em;
+}
+.fauxBlueButton a {
+	color:#ffffff;
+}
+
+#follow_us {
+	background-color: #2a5d7c;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 0.9em;
+	height:35px;
+}
+
+span.followUs {
+	float:right;
+	background-color: #588099;
+	padding-left:24px;
+	padding-right:24px;
+	margin-right: 40px;
+}
+span.followUsText {
+	display:block;
+	float:left;
+	height:25px;
+	padding-top:5px;	
+}
+#admin_login {
+	float:right;
+	margin-top:10px;
+	margin-right:45px;
+}
+
+form.signupForm {
+ background-color:#7999ad; 
+ margin-top:10px; 
+ padding:7px; 
+ width:236px;
+}
+
+#newsletter_signup {
+	width:100%;
+	margin-right: 40px;
+	background-color: #588099;
+	color:#ffffff;
+	height:100px;
+	border-top:7px solid #99b2c1;
+}
+#newsletter_form {
+	width:250px;
+	height:100px;
+	float:right;
+	margin-right:47px;
+}
+div.newsletterText {
+	padding-top:7px;
+	border-bottom: double #779eb6;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+div#drawing_invite {
+	float:left;
+	width:350px;
+}
+input.newsletterFormTextField {
+	background-color: #ffffff;
+	border:1px solid #999999;
+	height: 20px;
+}
+input.newsletterFormSubmit {
+	background-color: #9e7833;
+	border: 1px solid #ffffff;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+#newsletter_signup_ad {
+	width:400px;
+	margin-left:25px;
+}
+
+div.menuItem {
+	position: relative;
+	padding-top:40px;
+	border-left:1px solid #cccccc;
+	float:left;
+	width:100px;
+	background-color: #ffffff;
+}
+
+div.bookOnline {
+	width:140px;
+}
+
+div.menuItem span {
+	font-weight:bold;
+	font-size:1.0em;
+	text-transform: uppercase;
+	margin-left:5px;
+}
+
+div.menuItem a {
+	color:#588099;
+}
+
+div.menuItem a:hover {
+	color:#999999;
+	text-decoration: underline;
+}
+div.menuItem span.bookOnlineText {
+	color:#9e7833;
+}
+
+div.menuItem span.bookOnlineText a {
+	color:#9e7833;
+}
+
+div.businessTitle {
+	font-family: Futura,Verdana,Arial,sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.0em;
+	letter-spacing: 4px;
+	padding-top:14px;
+	color:#9e7833;
+}
+
+.m2uEm {
+	font-family: Futura,Verdana,Arial,sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.10em;
+	letter-spacing: 1px;
+	font-style: oblique;
+	color:#9e7833;	
+}
+
+div.businessSubTitle {
+	font-size:0.80em;
+	color:#588099;
+}
+
+/* video style begin */
+div.video {
+	
+	/* w320xh255 */
+	/* x256xh190 */
+	width:320px;
+	height:255px;
+	margin-right:20px;
+	font-size:1.0em;
+	font-weight:bold;
+	border: 1px solid #97111d;
+	padding:5px;
+	text-align:center;
+	float:left;
+	background-color: #ffffff;
+	position:relative;
+}
+/* video style end */
+
+/* header style begin */
+div.logo {
+	position: relative;
+	margin-top:0;
+	margin-bottom:30px;
+	float:right;
+	margin-left:20px;
+	width:265px;
+}
+img.logoIndex { margin-top:10px; margin-left: auto; margin-right: 25px;}
+/* header style end */
+
+#about_us {
+	width:490px;
+	margin-top:30px;
+	margin-left:-100px;
+}
+
+#services {
+	position:absolute;
+	margin-top:30px;
+	margin-left:-350px;
+	width:735px;
+}
+
+p.menuList {
+	position:absolute;
+	height:40px;
+	font-size: 0.80em;
+	margin-top:-10px;
+}
+
+p.menuList span {
+	margin-top:55px;
+	width:120px;
+	padding:10px;
+	background-color: #3b6e8f;
+	color:#ffffff;
+	margin-left: 0px;
+	padding-bottom:12px;
+}
+
+p.menuList span a {
+	color:#ffffff;
+	padding:5px 7px 5px 7px;
+}
+p.menuList span a:hover {
+	background-color: #5b89a3;
+	color:#ffffff;
+}
+
+#body p a {
+	color:#3b6e8f;
+}
+#body p a:hover {
+	text-decoration:underline;
+}
+div#newsletter_signup a {
+	color:#c3d7e2;
+}
+div#newsletter_signup a:hover {
+	text-decoration:underline;
+}
+
+p#bbb_img {
+	float:left;
+	margin-top:-35px; 
+	margin-left:10px;
+}
+
+p#welcome_paragraph {
+	width: 475px; 
+	border:1px solid #9e7833; 
+	background-color:#ffffff; 
+	padding:20px; 
+	padding-bottom:25px;
+	font-size:1.15em;
+	line-height: 1.55em;
+	margin-bottom:25px;
+	font-family: Tahoma,sans-serif;
+}
+
+p.homeContent {
+	margin-left:auto;
+	width:350px; 
+	padding:20px;
+}
+
+#rust_header, .rustHeader {
+	color: #2e5a95;
+	font-size:1.85em;
+}
+
+.normalText {
+	font-size: 1.15em;
+}
+
+.smallText {
+	font-size:0.75em;
+}
+
+.therapistImage {
+	border: 1px solid #c8a45e;
+	margin:auto;
+}
+.therapistName {
+	font-size: 8pt;
+}
+
+label {display:block; font-size:8pt;}
+
+.cell-label {
+	font-size:14px;
+	font-weight: bold;
+	color: #1b2360;
+}
+.cell-header-small {
+	text-align: center;
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #91d8f6;
+}
+.therapist_input {
+	border: 1px solid silver;
+	background-color: #E8E8E8;
+	font-size: large;
+}
+.smalltherapist_input {
+	border: 1px solid silver;
+	background: #E8E8E8;
+}
+.therapist-select {
+	border: 1px solid silver;
+}
+.therapist-button {
+	border: 1px solid silver;
+	font-size: large;
+}
+.error-msg {
+	color: #ff0000;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.success-msg {
+	color: #00aa00;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.app_question {
+	font-size: larger;
+	font-weight: bold;
+}
+
+.large_underline {
+	text-decoration: underline;
+	font-size: larger;
+}
+.large_bold {
+	font-weight: bold;
+	font-size: larger;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.small-txt {
+	font-size: 0.75em;
+}
+
+.bold-underline {
+	font-weight: bold;
+	text-decoration: underline;
+}
+#popup {
+	height:1px;
+	width:1px;
+	display:none;
+	position: absolute;
+	border:1px solid #999999;
+	background-color: #92b2f2;
+	bottom:145px;
+	z-index:100;
+}
+.redBorder {border:1px solid #ff0000;}
+.greenBorder {border:1px solid #00ff00;}
+.blueBorder {border:1px solid #0000ff;}
+.yellowBorder {border:1px solid #ffe600;}
+.orangeBorder {border:1px solid #ff6600;}
+.purpleBorder {border:1px solid #660098;}
+.cyanBorder {border:1px solid #00eeee;}
+.pinkBorder {border:1px solid #ff1cae;}
+
+.footerPhone {color:#ffffff;font-size:0.8em; margin:10px 20px 0 0; float:right;}
+
+.button {
+	display:inline;
+	padding:0.25em;
+	width:75px;
+	text-align:center;
+	margin:4px;
+	border:1px solid #666666;
+	background-color:#e4e4e4;
+	box-shadow: 0 1px 0 #cccccc;
+	-webkit-box-shadow: 0 1px 0 #cccccc;
+	-moz-box-shadow: 0 1px 0 #cccccc;
+	font-size:0.8em;
+}
+.button:hover {
+	cursor:pointer;
+	background-color:#d4d4d4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+#response {border:1px solid #cc0000; background-color: #ffebe8; padding:4px; font-size:0.9em; color:#660000; display:none;}
+
+#btn_chk_avail {
+	border:1px solid #99b2c1;
+	color:#ffffff;
+	text-transform: uppercase;
+	background-color:#2a5d7c;
+	font-size:1em;
+	padding:0.6em 1.0em;
+	-webkit-box-shadow:2px 2px 4px #999999, 2px 2px 4px #999999, 0 0 10px #01408c inset;
+		 -moz-box-shadow:2px 2px 4px #999999, 2px 2px 4px #999999, 0 0 10px #01408c inset;
+		 			box-shadow:2px 2px 4px #999999, 2px 2px 4px #999999, 0 0 10px #01408c inset;
+}
+#btn_chk_avail:hover {
+	color:#333333;
+	text-decoration:underline;
+	background-color:#efefef;
+	cursor:pointer;
+	-webkit-box-shadow:0 1px 4px #999, 0 0 10px #01408c inset;
+		 -moz-box-shadow:0 1px 4px #999, 0 0 16px #01408c inset;
+		 			box-shadow:0 1px 4px #999, 0 0 16px #01408c inset;
+}
+div.therapist-image, .therapist-image {
+	border:1px solid #848484;
+	margin:auto;
+	float:left;
+	-webkit-box-shadow:2px 2px 4px #999;
+		 -moz-box-shadow:2px 2px 4px #999;
+		 			box-shadow:2px 2px 4px #999;
+}

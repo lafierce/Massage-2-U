@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: Georgia, serif;
+	overflow: hidden;
+}
+
+#weather-info {
+	background: url(images/transpBlack.png);
+	padding: 20px 0 20px 0;
+	position: relative;
+	top: 200px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	z-index: 6000;
+}
+
+.bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+}
+
+#extended-forecast {
+	position: relative;
+	top: 0px;
+	display: none;
+}
+
+#tab {
+	width: 200px;
+	height: 36px;
+	background: url(images/tab-bg.png) no-repeat;
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	left: 50px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Outline</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+		$("#menuItem div.menuItems").hide();
+		$("#menu").mouseover(function(){
+			$(this).css("background-image","images/menu-btn-bk-blue.gif");
+		});
+		$("#menu").mouseout(function(){
+			$(this).css("background-image","images/menu-btn-bk.gif");
+		});
+		$("#menuItem div a").click(function(){
+			$(this).next().slideToggle('fast');
+		});
+	}
+);
+
+</script>
+<style type="text/css">
+html,body {
+	height: 100%;
+	font-family: Geneva,Verdana,sans-serif;
+	font-size: 12pt;
+	background-color: #ffffff;
+	margin-top:0px;
+	
+}
+div.container {
+	position: absolute;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -40px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-image:url('images/handsbackground.jpg');
+	background-repeat:no-repeat;
+	background-position:right top;
+	z-index: 1;
+}
+div.content {
+	float: clear;
+	z-index: 50;
+}
+div.header {
+	height: 100px;
+}
+div.footer {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 15px;
+	position: relative;
+	background-color: #8e6d2b;
+	font-size: 8pt;
+	padding: 10px;
+}
+div.clearfooter {
+	height: 30px;
+	clear: both;
+}
+div.login {
+	float: right;
+	height: 20px;
+	color: #ffffff;
+	text-align: center;
+}
+div.copy {
+	float: left;
+}
+div.utility {
+	float: right;
+	font-size: 10pt;
+	height: 100px;
+	z-index: 5;
+}
+div.menu {
+	position: absolute;
+	padding-top: 7px;
+}
+div.menuItem {
+	background: url('images/menu-btn-bk.gif') no-repeat;
+	height: 35px;
+	width: 150px;
+}
+div#menuItem { 
+	background: url('images/menu-btn-bk.gif') no-repeat;
+	height: 35px;
+	width: 150px;
+	padding-top: 7px;
+	position: relative;
+	float: inherit;
+}
+div.menu {
+	height: 30px;
+	line-height: 150%;
+}
+div.menuItems {
+	margin-top: 4px;
+	width: 133px;
+	padding-left: 15px;
+	padding-top: 3px;
+	line-height: 2.0em;
+	background: url('images/menu-btn-bk-border.gif') repeat-y;
+	border-left: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	border-top: solid 1px #cccccc;
+}
+a.menuItem {text-decoration: none;}
+a.menuItem:hover {text-decoration: underline;}
+img.list-bullet {
+	padding-right: 0.5em;
+}
+
+a.copy { text-decoration: none; color: #000000; }
+a.copy:hover { text-decoration: underline; color: #cccccc;}
+a.login { text-decoration: none; color: #ffffff; }
+a.login:hover { text-decoration: underline; color: #1b2360;}
+a.utility { text-decoration: none; color: #000000;}
+a.utility:hover { text-decoration: underline; color: #1b2360;}
+p.content {
+	line-height: 150%;
+	color: #1b2360;
+	padding: 5px;
+	font-size: -1em;
+}
+h1.headline {
+	font-size: 18pt;
+	color: #97111d;
+	text-align: center;
+}
+div.advert {
+	width: 80%;
+	/* for IE */
+	/*filter:alpha(opacity=60); */
+	/* CSS3 standard */
+	/*opacity:0.4; */
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 50;
+}
+h2.advert {
+	font-size: 16pt;
+	text-align: center;
+	z-index: 35;
+}
+img.opacity {
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.6;
+}
+img.list-bullet {padding-right: 0.5em;}
+</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="menu-collapsed.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+	<div class="menu">
+		<div class="menuItem"><a href="appointments.php" title="Book Online!" class="menuItem">Book Online!</a></div>
+			<div id="menuItem" onmouseover="this.style.backgroundImage='url(images/menu-btn-bk-blue.gif)'" onmouseout="this.style.backgroundImage='url(images/menu-btn-bk.gif)'">
+				<img src="images/list-bullet.png" class="list-bullet" /><a href="#" class="menuItem">about us</a>
+				<div class="menuItems">
+					<a href="" class="menuItem">service area</a><br />
+					<a href="" class="menuItem">rates/hours</a><br />
+					<a href="" class="menuItem">therapists</a><br />
+				</div>
+			</div>
+		</div>
+		<div class="utility"><a href="faq.php" class="utility">FAQ</a>&nbsp;&middot;
+		&nbsp;<a href="intakeform" class="utility">Intake Form</a>
+		<a href="index.php"><img src="images/m2u-admin-logo.gif" height="100" width="140" border="0" alt="Massage 2 U - logo" style="padding-top: 5px;" /></a>
+		</div>
+	</div>
+	</div>
+	<div class="content">
+	<h1 class="headline">Outcall & Chair Massage for Home, Hotel, and Events</h1>
+	<div class="advert"><h2 class="advert">Sign up now to win!<br />only 17 days until the next drawing!</h2></div>
+	<p class="content">Massage2U is an outcall massage business serving Houston, TX 
+	and surrounding areas. Our mobile massage therapists provide table massages at 
+	your home, hotel or business. We also provide chair massage for corporate events, 
+	trade shows, employee wellness and private parties. You choose your massage 
+	therapist, date and time. We have men and women therapists to accommodate our 
+	male and female clients.</p>
+
+	<p class="content">The therapist of your choice may be in a session. Please 
+	allow 2 hours advanced notice. 24 hour advanced noticed will be needed for 
+	couples massage, tandem massage, corporate events, and private parties.</p>
+
+	<p class="content">To book an appointment click Book Online and enter your zip 
+	code. You can choose your therapist, date and time. You can also view the 
+	therapists online profile to learn more about them and the massage modalities 
+	they are trained in.</p>
+
+	</div>
+	<div class="clearfooter"></div>
+</div>
+<div class="footer">
+	<div class="copy">&copy; Massage 2 U LLC&nbsp;&nbsp;&nbsp;|
+	<a href="policy.php" class="copy">privacy policy</a>&nbsp;&nbsp;&nbsp;|
+	<a href="sitemap.php" class="copy">sitemap</a></div>
+	<div class="login"><a href="admin.php" class="login">admin login</a></div>
+</div>
+</body>
+</html>
+

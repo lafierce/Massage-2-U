@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<title>JQuery Test</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+		$("#menu div").hide();
+		$("#menu").mouseover(function(){
+			$(this).css("background-image","images/menu-btn-bk-blue.gif");
+		});
+		$("#menu").mouseout(function(){
+			$(this).css("background-image","images/menu-btn-bk.gif");
+		});
+		$("#menu li a").click(function(){
+			$(this).next().slideToggle('fast');
+		});
+	}
+);
+
+</script>
+<style type="text/css">
+ul#menu { 
+	background:#ffffff url('images/menu-btn-bk.gif') no-repeat;
+	height: 35px;
+	width: 150px;
+	padding-top: 7px;
+}
+ul#menu, ul#menu ul {
+	list-style-type: none;
+}
+li.menu {
+	height: 30px;
+	line-height: 150%;
+}
+div.menuItems {
+	margin-top: 10px;
+	width: 133px;
+	padding-left: 15px;
+	padding-top: 3px;
+	line-height: 2.0em;
+	background: #ffffff url('images/menu-btn-bk-border.gif') repeat-y;
+	border-left: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	border-top: solid 1px #cccccc;
+}
+a.menuItem {text-decoration: none;}
+a.menuItem:hover {text-decoration: underline;}
+img.list-bullet {
+	padding-right: 0.5em;
+}
+</style>
+</head>
+<body>
+
+<ul id="menu" onmouseover="this.style.backgroundImage='url(images/menu-btn-bk-blue.gif)'" onmouseout="this.style.backgroundImage='url(images/menu-btn-bk.gif)'">
+	<li><img src="images/list-bullet.png" class="list-bullet" /><a href="#" class="menuItem">about us</a>
+	<div class="menuItems">
+		<a href="" class="menuItem">service area</a><br />
+		<a href="" class="menuItem">rates/hours</a><br />
+		<a href="" class="menuItem">therapists</a><br />
+	</div></li>
+</ul>
+
+
+</body>
+</html>

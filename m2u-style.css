@@ -1,0 +1,173 @@
+/*
+ rust = 97111d
+ blue = 1b2360
+ gold = 8e6d2b
+*/
+body {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #ffffff;
+	font-family: Geneva,Verdana,sans-serif;
+	font-size: 12pt;
+	color: #ffffff;
+	background: url(http://www.massage2ullc.com/images/m2u-bk-wmark2.jpg) top center no-repeat;
+}
+table,td {
+	color: #1b2360;
+}
+.bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#logo_home {
+	position: absolute;
+	left: 335px;
+	top: 95px;
+	height: 262px;
+}
+#admin_logo_home {
+	position: absolute;
+	left: 35px;
+	top: 10px;
+}
+#adminmenu {
+	position: relative;
+	
+}
+#common_btn_menu {
+	background-image: url("images/btn-decoration-bk.gif");
+	background-repeat: no-repeat;
+	background-position: top;
+	position: absolute;
+	left: 131px;
+	top: 300px;
+	width: 135px;
+	height: 418px;
+}
+#content_div {
+	margin:0 auto 10px auto;
+	width: 750px;
+	padding: 5px;
+	color: #1b2360;
+}
+#footer_copy {
+	position: relative;
+	bottom:0;
+	text-align: center;
+	width: 815px;
+	font-size: 8pt;
+	font-family: Verdana;
+	color: #0000aa;
+}
+#footer_image {
+	position: relative;
+	width: 100%;
+	height: 10px;
+	left: 0px;
+	bottom:0;
+}
+.fg {
+	width: 100%;
+}
+#rust_header {
+	font-size: 18pt;
+	color: #97111d;
+}
+.rust_header {
+	font-size: 18pt;
+	color: #97111d;
+}
+.therapist-image {
+	border: 1px solid #c8a45e;
+	text-align: center;
+}
+.therapist-name {
+	font-size: 8pt;
+}
+.cell-label {
+	font-size:14px;
+	font-weight: bold;
+	color: #1b2360;
+}
+.cell-header-small {
+	text-align: center;
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #91d8f6;
+}
+.therapist_input {
+	border: 1px solid silver;
+	background: #E8E8E8;
+	font-size: large;
+}
+.smalltherapist_input {
+	border: 1px solid silver;
+	background: #E8E8E8;
+}
+.therapist-select {
+	border: 1px solid silver;
+}
+.therapist-button {
+	border: 1px solid silver;
+	font-size: large;
+}
+.normal-text {
+	font-size: small;
+}
+.admin-link {
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+}
+.error-msg {
+	color: #ff0000;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.success-msg {
+	color: #00aa00;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.small-txt {
+	font-size: 8pt;
+}
+.small-bold-text {
+	font-size: 8pt;
+	font-weight: bold;
+}
+.large_underline {
+	text-decoration: underline;
+	font-size: larger;
+}
+.large_bold {
+	font-weight: bold;
+	font-size: larger;
+}
+.app_question {
+	font-size: larger;
+	font-weight: bold;
+}
+.bold-underline {
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.video {
+	width:480px;
+	font-size:20pt;
+	font-weight:bold;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #97111d;
+	padding:5px;
+	text-align:center;
+}
+.success {
+	background-color:#cdffbf;
+	border:#006600;
+	color:#006600;
+}
+label {display:block; font-size:8pt;}
